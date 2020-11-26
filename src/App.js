@@ -6,12 +6,13 @@ class Subject extends Component {
     return (
       <header>
         <h1>Campus Diary</h1>
+        <h4>Welcome, {this.props.name}</h4>
       </header>
     );
   }
 }
 
-class TOC extends Component {
+class Semester extends Component {
   render(){
     return (
       <nav class="semester">
@@ -34,8 +35,20 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Subject></Subject>
+        <Subject name="username"></Subject>
+        <Semester></Semester>
+        <BucketList></BucketList>
       </div>
+    );
+  }
+}
+
+//updated 11/26
+
+class BucketList extends Component {
+  render(){
+    return (
+      <h2>My Bucket List</h2>
     );
   }
 }
