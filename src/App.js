@@ -12,6 +12,24 @@ class Subject extends Component {
   }
 }
 
+class Login extends Component {
+  render(){
+    return(
+      <form action="" method="post">
+        <h3>Login</h3>
+        <section class="id">
+          <label for="id">UserID</label>
+          <input type="text" name="id" id="id"></input>
+        </section>
+        <section class="pw">
+          <label for="ipw">Password</label>
+          <input type="password" name="pw" id="pw"></input>
+        </section>
+        <input type="submit"></input>
+      </form>
+    );
+  }
+}
 class Semester extends Component {
   render(){
     return (
@@ -31,20 +49,6 @@ class Semester extends Component {
   }
 }
 
-class App extends Component {
-  render(){
-    return (
-      <div className="App">
-        <Subject name="username"></Subject>
-        <Semester></Semester>
-        <BucketList></BucketList>
-      </div>
-    );
-  }
-}
-
-//updated 11/26
-
 class BucketList extends Component {
   render(){
     return (
@@ -52,5 +56,19 @@ class BucketList extends Component {
     );
   }
 }
+
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+        <Subject name="username"></Subject>
+        <Login name="login"></Login>
+        <Semester name="semester"></Semester>
+        <BucketList name="bucket"></BucketList>
+      </div>
+    );
+  }
+}
+
 
 export default App;
